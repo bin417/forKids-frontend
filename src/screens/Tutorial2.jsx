@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Image, StyleSheet, View, Text } from "react-native";
+import { Image, StyleSheet, View, Text, Button } from "react-native";
 import {
   FontSize,
   FontFamily,
@@ -7,6 +7,9 @@ import {
   Color,
   Padding,
 } from "../GlobalStyles.js";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Tutorial2 = () => {
   return (
@@ -109,9 +112,9 @@ const Tutorial2 = () => {
           </Text>
         </View>
       </View>
-      <View style={styles.wrapper}>
+      <Button style={styles.wrapper} onPress={() => navigator.navigate("Chat")}>
         <Text style={styles.text1}>시작하기</Text>
-      </View>
+      </Button>
     </View>
   );
 };
